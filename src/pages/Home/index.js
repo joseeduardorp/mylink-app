@@ -29,6 +29,7 @@ import {
 } from './styles';
 
 import api from '../../services/api';
+import { saveLink } from '../../utils/storeLinks';
 
 export default function Home() {
   const [input, setInput] = useState('');
@@ -43,10 +44,11 @@ export default function Home() {
       const response = await api.post('/shorten', {
         long_url: input
       });
-
       
       setData(response.data);
       setModalVisible(true);
+
+      saveLink("sujeitolinks", response.data);
 
       Keyboard.dismiss();
       setInput('');

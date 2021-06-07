@@ -14,3 +14,12 @@ export const Item = styled.Text`
   font-size: 18px;
   color: #fff;
 `;
+
+export const ActionContainer = styled.TouchableOpacity`
+  margin: 7px 10px;
+  width: 15%;
+  background-color: #ff5555;
+  border-radius: 7px;
+  justify-content: center;
+  align-items: center;
+`;
